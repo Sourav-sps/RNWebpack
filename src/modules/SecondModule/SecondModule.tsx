@@ -1,0 +1,31 @@
+import React from 'react';
+import {useColorScheme, View} from 'react-native';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {Section} from '../../components/Section/Section';
+import {Text} from '../../components/Text';
+function SecondModule() {
+  const isDarkMode = useColorScheme() === 'dark';
+
+  console.log('SecondModule=====>');
+
+  return (
+    <View
+      style={{
+        backgroundColor: isDarkMode ? Colors.black : Colors.white,
+      }}>
+      <Section title="Remote Module">
+        <Text>
+          This module is loading dynamically for execution and is not shipped
+          with the app. It is a remote module.
+        </Text>
+      </Section>
+      <Section title="Details">
+        <Text>
+          This will not be part of app's initial bundle size. This will be
+          loaded in app after consuming network bandwidth.
+        </Text>
+      </Section>
+    </View>
+  );
+}
+export default SecondModule;

@@ -1,4 +1,12 @@
 {
   "name": "RNWebpackPOC",
-  "displayName": "RNWebpackPOC"
+  "displayName": "RNWebpackPOC",
+  "localChunks": [
+    "src_modules_LocalModule_LocalModule_tsx"
+  ],
+  "remoteChunks": [
+    "src_modules_RemoteModule_RemoteModule_tsx"
+  ],
+  "remoteChunkPort": 8081,
+  "remoteChunkUrl": "192.168.29.74"
 }
